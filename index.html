@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Apex TS | TeamSpeak Community</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="intro" class="intro"><div class="intro-logo">Apex <span>TS</span></div><div class="loader"></div></div>
+<header class="navbar">
+<a class="brand" href="#home"><span>Apex</span> TS</a>
+<nav><a href="#home">خانه</a><a href="#features">امکانات</a><a href="#comments">نظرات</a><a href="#about">درباره ما</a><button id="authBtn" class="nav-btn">ورود / ثبت‌نام</button></nav>
+</header>
+<main>
+<section id="home" class="hero"><div class="ornament right">𐎠</div><div class="hero-content"><div class="eyebrow">TEAM SPEAK COMMUNITY</div><h1><span>Apex</span> TS</h1><p>محیطی دوستانه، پایدار و حرفه‌ای برای دورهمی و ارتباط گیمرها.</p><div class="hero-actions"><a class="primary" href="#comments">نظرات کاربران</a><a class="secondary" href="#about">درباره ما</a></div></div><div class="ornament left">𐭠</div></section>
+<section id="features" class="section"><div class="section-title"><span>APEX TS</span><h2>چرا Apex TS؟</h2></div><div class="cards">
+<article class="card"><div class="icon">🛡️</div><h3>پشتیبانی حرفه‌ای</h3><p>برای سوالات و مشکلات، تیم ما در کنار کامیونیتی است.</p></article>
+<article class="card"><div class="icon">🤝</div><h3>محیط دوستانه</h3><p>فضایی صمیمی برای گپ، بازی و آشنایی با اعضا.</p></article>
+<article class="card"><div class="icon">⚡</div><h3>آپتایم بالا</h3><p>تلاش برای تجربه‌ای پایدار و سریع برای کاربران Apex TS.</p></article>
+</div></section>
+<section id="comments" class="section dark"><div class="section-title"><span>COMMUNITY</span><h2>نظرات کاربران</h2></div>
+<div id="commentsList" class="comments-list"></div><div class="comment-box"><textarea id="commentText" rows="4" placeholder="نظرت درباره Apex TS چیه؟"></textarea><button id="commentBtn" class="primary">ثبت نظر</button><small id="commentHint">برای ثبت نظر باید وارد حساب کاربری شوی.</small></div></section>
+<section id="about" class="section about"><div class="section-title"><span>ABOUT</span><h2>درباره Apex TS</h2></div><p>Apex TS یک کامیونیتی TeamSpeak با تمرکز روی محیط دوستانه، پشتیبانی حرفه‌ای و تجربه‌ای مرتب و مدرن است.</p><div class="contact">📧 apex.ts.official@gmail.com</div></section>
+</main>
+<footer>Copyright © 2026 Apex TS — All Rights Reserved.</footer>
+<div id="authModal" class="modal hidden"><div class="modal-card"><button id="closeModal" class="close">×</button>
+<div class="tabs"><button class="active" data-tab="login">ورود</button><button data-tab="signup">ثبت‌نام</button></div>
+<div id="loginForm" class="form"><h2>ورود به Apex TS</h2><input id="loginUser" placeholder="نام کاربری"><input id="loginPass" type="password" placeholder="رمز عبور"><button id="loginBtn" class="primary">ورود</button></div>
+<div id="signupForm" class="form hidden"><h2>ساخت حساب</h2><input id="signupEmail" type="email" placeholder="ایمیل"><input id="signupUser" placeholder="نام کاربری"><input id="signupPass" type="password" placeholder="رمز عبور"><button id="signupBtn" class="primary">ثبت‌نام</button></div>
+<p id="authMessage"></p></div></div>
+<script src="script.js"></script>
+</body></html>
