@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Apex TS | TeamSpeak Community</title>
+<link rel="stylesheet" href="style.css">
+
+<style id="apex-account-animations">
+.apex-pop{animation:apexPop .28s ease-out both}
+@keyframes apexPop{from{opacity:0;transform:translateY(8px) scale(.97)}to{opacity:1;transform:none}}
+.apex-confirm-back{position:fixed;inset:0;background:rgba(0,0,0,.58);backdrop-filter:blur(6px);display:flex;align-items:center;justify-content:center;z-index:100000;font-family:inherit}
+.apex-confirm{width:min(430px,calc(100% - 34px));background:#11151f;border:1px solid rgba(100,160,255,.32);border-radius:18px;padding:26px;color:#fff;box-shadow:0 20px 70px rgba(0,0,0,.55);text-align:right;direction:rtl}
+.apex-confirm h3{margin:0 0 10px;font-size:20px;font-weight:700}
+.apex-confirm p{margin:0 0 22px;color:#c9ced8;line-height:1.9;font-size:15px}
+.apex-confirm-actions{display:flex;gap:10px;justify-content:flex-start}
+.apex-confirm button{font-family:inherit;border:0;border-radius:10px;padding:10px 18px;cursor:pointer;font-size:14px;font-weight:700}
+.apex-yes{background:#2d8cff;color:#fff}.apex-no{background:#292f3b;color:#fff}
+.apex-success{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;z-index:99999;pointer-events:none}
+.apex-success-box{background:#11151f;border:1px solid rgba(70,150,255,.45);box-shadow:0 18px 70px rgba(0,0,0,.45),0 0 30px rgba(40,130,255,.2);border-radius:18px;padding:25px 30px;color:#fff;text-align:center;font-weight:700;font-family:inherit;direction:rtl;animation:apexPop .3s ease-out}
+.apex-success-icon{width:52px;height:52px;margin:0 auto 12px;border-radius:50%;display:grid;place-items:center;background:rgba(50,145,255,.15);font-size:25px}
+.apex-iranian{position:relative;overflow:hidden}
+.apex-iranian:before{content:"𐎠 𐎱 𐎫 𐎿  •  ✦  ☀  •  ✦";position:absolute;inset:auto 0 0;text-align:center;letter-spacing:10px;font-size:12px;opacity:.16;pointer-events:none}
+.apex-persian-ornament{font-family:serif;letter-spacing:4px;opacity:.7}
+</style>
+</head>
+<body>
+<div id="intro" class="intro"><div class="intro-logo">Apex <span>TS</span></div><div class="loader"></div></div>
+<header class="navbar">
+<a class="brand" href="#home"><span>Apex</span> TS</a>
+<nav><a href="#home">خانه</a><a href="#features">امکانات</a><a href="#server-ip">آی‌پی سرور</a><a href="#about">درباره ما</a><button id="authBtn" class="nav-btn">ورود / ثبت‌نام</button></nav>
+</header>
+<main>
+<section id="home" class="hero"><div class="ornament right">𐎠</div><div class="hero-content"><div class="eyebrow">TEAM SPEAK COMMUNITY</div><h1><span>Apex</span> TS</h1><p>محیطی دوستانه، پایدار و حرفه‌ای برای دورهمی و ارتباط گیمرها.</p><div class="hero-actions"><a class="primary" href="#server-ip">آی‌پی سرور</a><a class="secondary" href="#about">درباره ما</a></div></div><div class="ornament left">𐭠</div></section>
+<section id="features" class="section"><div class="section-title"><span>APEX TS</span><h2>چرا Apex TS؟</h2></div><div class="cards">
+<article class="card"><div class="icon">🛡️</div><h3>پشتیبانی حرفه‌ای</h3><p>برای سوالات و مشکلات، تیم ما در کنار کامیونیتی است.</p></article>
+<article class="card"><div class="icon">🤝</div><h3>محیط دوستانه</h3><p>فضایی صمیمی برای گپ، بازی و آشنایی با اعضا.</p></article>
+<article class="card"><div class="icon">⚡</div><h3>آپتایم بالا</h3><p>تلاش برای تجربه‌ای پایدار و سریع برای کاربران Apex TS.</p></article>
+</div></section>
+<section id="server-ip" class="section dark server-ip"><div class="section-title"><span>SERVER INFO</span><h2>آی‌پی سرور</h2></div><div class="ip-card"><div class="ip-label">SERVER IP</div><div class="ip-address">tstg.ir:4611</div><p>برای خرید رنگ داخل تلگرام پیام دهید</p><a class="telegram" href="https://t.me/Dexter_5156" target="_blank" rel="noopener">@Dexter_5156</a></div></section>
+<section id="about" class="section about"><div class="section-title"><span>ABOUT</span><h2>درباره Apex TS</h2></div><p>Apex TS یک کامیونیتی TeamSpeak با تمرکز روی محیط دوستانه، پشتیبانی حرفه‌ای و تجربه‌ای مرتب و مدرن است.</p><div class="contact">📧 apex.ts.official@gmail.com</div></section>
+</main>
+<footer>Copyright © 2026 Apex TS — All Rights Reserved.</footer>
+<div id="authModal" class="modal hidden"><div class="modal-card"><button id="closeModal" class="close">×</button>
+<div class="tabs"><button class="active" data-tab="login">ورود</button><button data-tab="signup">ثبت‌نام</button></div>
+<div id="loginForm" class="form"><h2>ورود به Apex TS</h2><input id="loginUser" placeholder="نام کاربری"><input id="loginPass" type="password" placeholder="رمز عبور"><button id="loginBtn" class="primary">ورود</button></div>
+<div id="signupForm" class="form hidden"><h2>ساخت حساب</h2><input id="signupEmail" type="email" placeholder="ایمیل"><input id="signupUser" placeholder="نام کاربری"><input id="signupPass" type="password" placeholder="رمز عبور"><button id="signupBtn" class="primary">ثبت‌نام</button></div>
+<p id="authMessage"></p></div></div>
+<script src="script.js"></script>
+
+
+
+<script id="apex-account-effects">
+(function(){
+  function clearSession(){
+    try{
+      ['user','currentUser','loggedInUser','loggedIn','isLoggedIn','account'].forEach(k=>{
+        localStorage.removeItem(k); sessionStorage.removeItem(k);
+      });
+    }catch(e){}
+  }
+  window.apexConfirmLogout=function(onYes){
+    const back=document.createElement('div');
+    back.className='apex-confirm-back';
+    back.innerHTML='<div class="apex-confirm apex-pop"><h3>خروج از حساب کاربری</h3><p>آیا مطمئن هستید که می‌خواهید از حساب کاربری خارج شوید؟</p><div class="apex-confirm-actions"><button type="button" class="apex-no">خیر</button><button type="button" class="apex-yes">بله، مطمئن هستم و می‌خواهم خارج شوم</button></div></div>';
+    document.body.appendChild(back);
+    back.querySelector('.apex-no').onclick=function(){back.remove();};
+    back.querySelector('.apex-yes').onclick=function(){back.remove();clearSession();if(onYes)onYes();};
+    back.addEventListener('click',function(e){if(e.target===back)back.remove();});
+  };
+  window.apexAccountCreated=function(){
+    const el=document.createElement('div');el.className='apex-success';
+    el.innerHTML='<div class="apex-success-box"><div class="apex-success-icon">✓</div><div>حساب شما با موفقیت درست شد :)</div></div>';
+    document.body.appendChild(el);setTimeout(()=>el.remove(),2200);
+  };
+  document.addEventListener('click',function(e){
+    const btn=e.target.closest('button,a,[role="button"]');if(!btn)return;
+    const txt=(btn.textContent||'').trim().toLowerCase();
+    if(/خروج|logout|sign out|log out/.test(txt)&&!btn.dataset.apexLogout){
+      btn.dataset.apexLogout='1';e.preventDefault();e.stopImmediatePropagation();
+      window.apexConfirmLogout(function(){window.location.reload();});
+    }
+  },true);
+})();
+</script>
+
+<script id="apex-email-validation">
+(function(){
+ function validEmail(v){return /^[A-Za-z0-9._%+-]+@(gmail\.com|outlook\.com)$/i.test((v||'').trim());}
+ function install(){
+  document.querySelectorAll('input[type="email"]').forEach(function(input){
+   if(input.dataset.apexChecked)return;input.dataset.apexChecked='1';
+   const form=input.form;
+   function check(){input.setCustomValidity(validEmail(input.value)?'':'ایمیل باید با @gmail.com یا @outlook.com تمام شود.');}
+   input.addEventListener('input',check);
+   if(form)form.addEventListener('submit',function(e){check();if(!validEmail(input.value)){e.preventDefault();input.reportValidity();input.focus();}},true);
+  });
+ }
+ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',install);else install();
+ new MutationObserver(install).observe(document.documentElement,{childList:true,subtree:true});
+})();
+</script>
+
+<script id="apex-iranian-symbols">
+(function(){
+  function addOrnaments(){
+    document.querySelectorAll('header,nav,.navbar,.hero,.footer,footer').forEach(function(el){
+      if(el.dataset.apexIranian)return;
+      el.dataset.apexIranian='1';
+      el.classList.add('apex-iranian');
+    });
+  }
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',addOrnaments);else addOrnaments();
+  new MutationObserver(addOrnaments).observe(document.documentElement,{childList:true,subtree:true});
+})();
+</script>
+</body></html>
