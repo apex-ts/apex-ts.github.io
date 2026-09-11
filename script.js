@@ -1,9 +1,4 @@
-/*
-  APEX TS COUNTDOWN
-  -----------------
-  زمان شروع انتشار را در START_AT قرار بده.
-  تایمر دقیقاً 12 ساعت از آن زمان شمارش می‌کند.
-*/
+
 const START_AT = "2026-09-11T8:8:00+03:30";
 
 const $ = id => document.getElementById(id);
