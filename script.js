@@ -12,3 +12,6 @@ document.querySelectorAll(".tabs button").forEach(b=>b.onclick=()=>{document.que
 $("#signupBtn").onclick=()=>{const email=$("#signupEmail").value.trim(),user=$("#signupUser").value.trim(),pass=$("#signupPass").value;if(!email||!user||!pass)return $("#authMessage").textContent="همه فیلدها را کامل کن.";let u=users();if(u.some(x=>x.user===user||x.email===email))return $("#authMessage").textContent="این ایمیل یا نام کاربری قبلاً ثبت شده.";u.push({email,user,pass});saveUsers(u);current={user,email};localStorage.setItem("apex_current",JSON.stringify(current));$("#authModal").classList.add("hidden");updateAuth()};
 $("#loginBtn").onclick=()=>{const user=$("#loginUser").value.trim(),pass=$("#loginPass").value,found=users().find(x=>x.user===user&&x.pass===pass);if(!found)return $("#authMessage").textContent="نام کاربری یا رمز عبور اشتباه است.";current={user:found.user,email:found.email};localStorage.setItem("apex_current",JSON.stringify(current));$("#authModal").classList.add("hidden");updateAuth()};
 updateAuth();
+<script type="text/javascript">
+  !function(){var i="kDD2GT",d=document,g=d.createElement("script"),s="https://www.goftino.com/widget/"+i,l=localStorage.getItem("goftino_"+i);g.type="text/javascript",g.async=!0,g.src=l?s+"?o="+l:s;d.getElementsByTagName("head")[0].appendChild(g);}();
+</script>
