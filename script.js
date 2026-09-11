@@ -1,5 +1,5 @@
 
-const START_AT = "2026-09-11T8:8:00+03:30";
+const START_AT = "2026-09-11T9:6:00+03:30";
 
 const $ = id => document.getElementById(id);
 const pad = n => String(n).padStart(2, "0");
