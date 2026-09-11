@@ -4,7 +4,7 @@
   زمان شروع انتشار را در START_AT قرار بده.
   تایمر دقیقاً 12 ساعت از آن زمان شمارش می‌کند.
 */
-const START_AT = "2026-09-11T15:30:00+03:30";
+const START_AT = "2026-09-11T13:20:00+03:30";
 
 const $ = id => document.getElementById(id);
 const pad = n => String(n).padStart(2, "0");
