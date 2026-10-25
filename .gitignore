@@ -1,0 +1,6 @@
+node_modules
+.next
+.env
+.env.local
+private_uploads/
+data/orders.json
